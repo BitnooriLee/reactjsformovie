@@ -1,0 +1,34 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client';
+import { useState } from "react";
+import styles from "./App.module.css";
+
+
+function App() {
+  const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState([]);
+  const onChange = (event) => setToDo(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo === ""){
+      return;
+    } 
+      setTodos(currentArray => [toDo, ...currentArray]);
+      setTodo("");
+  };
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+      <input
+          onChange={onChange}
+          value={toDo}
+          type="text"
+          placeholder="Write your to do..."
+        />
+        <button>Add To Do</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
