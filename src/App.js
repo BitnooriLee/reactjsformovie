@@ -13,8 +13,9 @@ function App() {
     if (toDo === ""){
       return;
     } 
-      setTodos(currentArray => [toDo, ...currentArray]);
-      setTodo("");
+      setToDos((currentArray) => [toDo, ...currentArray]);
+      setToDo("");
+      
   };
   return (
     <div>
@@ -32,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+
