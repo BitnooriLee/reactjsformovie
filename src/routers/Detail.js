@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
+import Movie from '../components/Movie';
+import { Link } from "react-router-dom";
+
 
 function Detail() {
     const [loading, setLoading] = useState(true);
@@ -26,20 +29,35 @@ function Detail() {
     {loading ? (
     <h1>Loading...</h1>
     ) : (
-    <div>
-    {details.map((detail) => (
-      <Detail 
-      key={detail.id}
-      id= {detail.id}
-      large_cover_image = {detail.large_cover_image}
-      description_Intro ={detail.description_intro}
-      description_full={detail.description_full}
-      rating={detail.rating}
-      />
-    ))}
+        <div>
+        <button>Back to home</button>
+        <h2>{details.title}</h2>
+        <img src={details.large_cover_image} alt={details.title} />
+        <p>{details.rating}</p>
+        <p>{details.description_full}</p>
+        <ul>
+            {details.genres.map((g) => (
+                <li key={g}>{g}</li>
+            ))}
+        </ul>
     </div>
     )}
     </div> 
 }
 
+
+
 export default Detail;
+
+
+
+ /*   {details.map((detail) => (
+      <Movie 
+      key={detail.id}
+      id= {detail.id}
+      medium_cover_image={detail.medium_cover_image}
+      title={detail.title}
+      summary={detail.summary}
+      genres={detail.summary}
+      />
+    ))} */

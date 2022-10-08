@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState, useEffect } from "react";
 import Movie from '../components/Movie';
-
+import styles from "./Home.module.css";
 
 function Home(){
 
@@ -22,19 +22,20 @@ function Home(){
     useEffect(() => {
       getMovies();
     }, []);
-    return <div>
+    return <div className={styles.container}>
     {loading ? (
     <h1>Loading...</h1>
     ) : (
-    <div>
+      <div className={styles.movies}>
     {movies.map((movie) => (
       <Movie 
       key={movie.id}
       id= {movie.id}
-      medium_cover_image={movie.medium_cover_image}
+      coverImg={movie.medium_cover_image}
       title={movie.title}
       summary={movie.summary}
       genres={movie.genres}
+      year= {movie.year}
       />
     ))}
     </div>
@@ -44,3 +45,4 @@ function Home(){
 }
 
 export default Home;
+
