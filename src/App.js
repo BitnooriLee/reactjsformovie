@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Movie from './components/Movie';
 
 import {
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -13,14 +14,12 @@ import Detail from "./routers/Detail";
 function App() {
   return (
     <div>
-        <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/movie/:id`} // reserved name for useParams
-        element={<Detail />}/>
-      </Routes>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/`}
-        element={<Home />}/>
+        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/" element={<Home />}/>
       </Routes>
+    </BrowserRouter>
       </div>
   );
 }
