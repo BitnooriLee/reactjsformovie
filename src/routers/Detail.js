@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import Movie from '../components/Movie';
 import { Link } from "react-router-dom";
+import styles from "./Detail.module.css";
+
 
 
 function Detail() {
@@ -29,8 +31,10 @@ function Detail() {
     {loading ? (
     <h1>Loading...</h1>
     ) : (
-        <div>
-        <button>Back to home</button>
+        <div className={styles.container}>
+        <Link to={'/'}>
+        <button className = {styles.btn}> Back to home </button>
+        </Link>
         <h2>{details.title}</h2>
         <img src={details.large_cover_image} alt={details.title} />
         <p>{details.rating}</p>
