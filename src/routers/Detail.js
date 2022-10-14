@@ -31,12 +31,13 @@ function Detail() {
     {loading ? (
     <h1>Loading...</h1>
     ) : (
-        <div className={styles.container}>
+        <div className={styles.detail}>
         <Link to={'/'}>
-        <button className = {styles.btn}> Back to home </button>
+        <button className = {styles.btn}> Back to Home </button>
         </Link>
         <h2>{details.title}</h2>
         <img src={details.large_cover_image} alt={details.title} />
+        <div className={styles.main_detail}>
         <p>{details.rating}</p>
         <p>{details.description_full}</p>
         <ul>
@@ -44,6 +45,7 @@ function Detail() {
                 <li key={g}>{g}</li>
             ))}
         </ul>
+        </div>
     </div>
     )}
     </div> 
