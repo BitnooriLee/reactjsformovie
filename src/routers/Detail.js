@@ -35,13 +35,13 @@ function Detail() {
         <Link to={'/'}>
         <button className = {styles.btn}> Back to Home </button>
         </Link>
+        <div className={styles.main_detail}>
         <h2>{details.title}</h2>
         <img src={details.large_cover_image} alt={details.title} />
-        <div className={styles.main_detail}>
-        <p>{details.rating}</p>
-        <p>{details.description_full}</p>
-        <ul>
-            {details.genres.map((g) => (
+        <p>Rating: {details.rating}</p>
+        <p>Description: {details.description_full}</p>
+        <ul className={styles.genres}>
+            Genres: {details.genres.map((g) => (
                 <li key={g}>{g}</li>
             ))}
         </ul>
