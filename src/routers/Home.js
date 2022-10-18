@@ -6,7 +6,7 @@ import styles from "./Home.module.css";
 
 function Home(){
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); //using hooks
     const [movies, setMovies] = useState([]);
     const getMovies = async () => {
       const json = await (

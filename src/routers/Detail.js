@@ -19,8 +19,6 @@ function Detail() {
                 )
         ).json();
         setDetails(json.data.movie);
-        console.log(json.data.movie);
-        console.log(id);
         setLoading(false);
     };
     useEffect(() => {
@@ -44,7 +42,7 @@ function Detail() {
             Genres: {details.genres.map((g) => (
                 <li key={g}>{g}</li>
             ))}
-        </ul>
+        </ul>                
         </div>
     </div>
     )}
