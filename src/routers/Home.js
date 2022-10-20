@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState, useEffect } from "react";
 import Movie from '../components/Movie';
+import Counter from '../components/Counter';
 import styles from "./Home.module.css";
 
 function Home(){
@@ -26,6 +27,10 @@ function Home(){
     {loading ? (
     <h1>Loading...</h1>
     ) : (
+      <div>
+        <p className={styles.counter}>
+      <Counter movies = {movies}/>
+      </p>
       <div className={styles.movies}>
     {movies.map((movie) => (
       <Movie 
@@ -38,6 +43,7 @@ function Home(){
       year= {movie.year}
       />
     ))}
+    </div>
     </div>
     )}
     </div>  
