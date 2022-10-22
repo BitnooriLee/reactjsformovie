@@ -1,3 +1,6 @@
+# Reatcjs for movie 
+# Using Movie API, it provides selected movie's detail 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
