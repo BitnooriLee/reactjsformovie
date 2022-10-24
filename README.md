@@ -1,15 +1,22 @@
 # Reatcjs for movie 
-# Using Movie API, it provides selected movie's detail 
+
+## Introduction
+Using Movie API, it provides selected movie's detail 
+
+
+## What I've learned from this Project 
+<ul>
+<li> JSX</li>
+<li>State</li>
+<li>Props</li>
+<li>Class Components</li>
+<li>Data Fetching</li>
+</ul>
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-JSX
-State
-Props
-Class Components
-Data Fetching
 
 ## Available Scripts
 
